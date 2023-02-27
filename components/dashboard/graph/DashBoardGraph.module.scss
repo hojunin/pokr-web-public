@@ -1,0 +1,51 @@
+.root {
+  @apply p-8 mobile:p-5 mt-6 rounded-md relative overflow-hidden;
+  background-color: white;
+
+  & .container {
+    background-color: #fff;
+  }
+
+  & .timer {
+    @apply absolute top-0 right-0 rounded-bl-md mobile:hidden;
+
+    background-color: var(--pri-400);
+    color: #ffffff;
+    padding: 8px 12px;
+  }
+
+  & .tooltip {
+    @apply rounded-lg p-3 rounded-br-none bg-black;
+
+    & .label {
+      @apply font-thin text-sm text-white;
+    }
+    & .desc {
+      @apply text-sm text-white;
+    }
+
+    & .chip-container {
+      @apply flex flex-row items-center;
+    }
+
+    & .chip-me {
+      @apply rounded-full w-1 h-1 mr-1;
+      background-color: var(--pri-400);
+    }
+
+    & .chip-avg {
+      @apply rounded-full w-1 h-1 mr-1;
+      background-color: var(--pri-200);
+    }
+  }
+
+  & h1 {
+    @apply text-2xl font-bold mobile:text-base mb-3;
+  }
+
+  .highlight {
+    @apply font-normal mb-10;
+    color: var(--pri-400);
+    font-weight: bold;
+  }
+}

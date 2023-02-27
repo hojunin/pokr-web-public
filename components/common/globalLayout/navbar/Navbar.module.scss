@@ -1,0 +1,25 @@
+.root {
+  @apply fixed left-0 top-0 h-full;
+
+  width: 68px;
+  padding-top: 68px;
+  background-image: linear-gradient(to bottom, #00bd90 0%, #58dba4 100%);
+
+  & > a {
+    @apply block text-center w-full text-white text-xs;
+
+    height: 68px;
+    padding-top: 12px;
+
+    &.selected {
+      background-color: var(--pri-800);
+    }
+
+    & > div {
+      @apply mx-auto;
+
+      width: 24px;
+      margin-bottom: 4px;
+    }
+  }
+}

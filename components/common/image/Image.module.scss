@@ -1,0 +1,13 @@
+.root {
+  @apply w-full;
+
+  & > span {
+    position: unset !important;
+
+    & .autoImage {
+      object-fit: contain !important;
+      position: relative !important;
+      height: auto !important;
+    }
+  }
+}

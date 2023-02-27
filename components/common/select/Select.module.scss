@@ -1,0 +1,54 @@
+.root {
+  @apply relative inline-block;
+
+  & .selectedValue {
+    @apply bg-white;
+
+    height: 40px;
+    line-height: 40px;
+    padding: 0 38px 0 12px;
+    border-radius: 8px;
+    border: 1px solid var(--border-gray);
+    background: right 7px top 50%/22px no-repeat #fff
+      url('/images/down-arrow.png');
+
+    &.open {
+      border-color: var(--pri-400);
+
+      & + ul {
+        @apply block;
+      }
+    }
+  }
+
+  & .options {
+    @apply hidden absolute bg-white;
+
+    margin-top: 4px;
+    padding: 6px 4px;
+    border-radius: 8px;
+    border: 1px solid var(--border-gray);
+    box-shadow: 0 0 20px 0 rgba(102, 102, 102, 0.08),
+      0 0 6px 0 rgba(102, 102, 102, 0.04);
+    z-index: 2;
+
+    & > li {
+      height: 40px;
+      line-height: 40px;
+
+      & button {
+        @apply cursor-pointer w-full;
+
+        padding: 0 40px 0 8px;
+        color: var(--content-gray1);
+
+        &:hover,
+        &.selected {
+          @apply font-bold;
+
+          color: var(--pri-400);
+        }
+      }
+    }
+  }
+}

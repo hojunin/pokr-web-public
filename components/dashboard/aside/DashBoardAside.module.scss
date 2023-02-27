@@ -1,0 +1,19 @@
+.root {
+  @apply w-96 mobile:w-full;
+  grid-area: aside;
+
+  .header {
+    @apply mb-6;
+    display: flex;
+  }
+
+  & h1 {
+    @apply font-bold;
+
+    font-size: 22px;
+  }
+
+  .card {
+    @apply rounded-lg bg-white flex-1 p-5;
+  }
+}

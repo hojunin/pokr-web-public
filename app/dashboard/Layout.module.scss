@@ -1,0 +1,20 @@
+.root {
+  display: grid;
+  padding: 90px 0px 0px 90px;
+  grid-template-areas:
+    'header header header'
+    'main main aside';
+  grid-template-columns: calc(100vw - 24rem - 40px) 24rem;
+  grid-column-gap: 40px;
+  grid-row-gap: 10px;
+
+  grid-template-columns: auto 24rem;
+
+  @screen mobile {
+    padding: 20px;
+    grid-template-areas:
+      'header'
+      'main'
+      'aside';
+  }
+}

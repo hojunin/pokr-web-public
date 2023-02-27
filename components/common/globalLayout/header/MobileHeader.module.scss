@@ -1,0 +1,13 @@
+.root {
+  @apply fixed left-0 top-0 w-full flex items-center justify-between bg-white;
+
+  height: 48px;
+  padding: 0 20px;
+  z-index: 99;
+
+  & h1 {
+    @apply font-bold;
+
+    font-size: 22px;
+  }
+}

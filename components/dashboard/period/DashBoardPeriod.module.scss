@@ -1,0 +1,168 @@
+.root {
+  @apply mobile:bg-white mobile:hidden;
+
+  & .periodContainer {
+    @apply flex justify-between items-center;
+
+    & > .periodCategory {
+      @apply flex text-base;
+
+      margin: 40px 0 20px;
+
+      & label {
+        margin-right: 16px;
+      }
+
+      & span {
+        margin-right: 6px;
+      }
+    }
+
+    & > .periodOfTime {
+      @apply flex items-center text-sm relative;
+
+      color: var(--text-body);
+
+      & > div:first-child {
+        width: 20px;
+        margin-right: 6px;
+      }
+
+      & button {
+        @apply relative;
+
+        & .tooltip {
+          @apply absolute;
+
+          left: -111px;
+          // left: 0;
+          min-width: 234px;
+          top: -45px;
+        }
+      }
+    }
+
+    @screen mobile {
+      margin: 12px 0 0;
+      padding: 32px 24px 24px;
+
+      & > .periodCategory {
+        & label {
+          margin-right: 8px;
+        }
+
+        & span {
+          @apply hidden;
+        }
+      }
+    }
+  }
+
+  & .categoryContainer {
+    @apply desktop:flex;
+
+    & > li {
+      @apply w-1/3 bg-white flex desktop:flex-wrap relative overflow-hidden mobile:w-full mobile:items-center;
+
+      height: 116px;
+      padding: 22px 24px;
+      border-radius: 8px;
+      border: 1px solid var(--border-gray);
+
+      &.objectives {
+        & strong {
+          color: var(--sub-blue-400);
+        }
+
+        & > .progress > span {
+          background-color: var(--sub-blue-400);
+        }
+      }
+
+      &.keyResult {
+        & strong {
+          color: var(--sub-purple-400);
+        }
+
+        & > .progress > span {
+          background-color: var(--sub-purple-400);
+        }
+      }
+
+      &.initiatives {
+        & strong {
+          color: var(--sub-orange-400);
+        }
+
+        & > .progress > span {
+          background-color: var(--sub-orange-400);
+        }
+      }
+
+      &:not(:last-child) {
+        margin-right: 30px;
+      }
+
+      & > div:first-child {
+        width: 48px;
+        height: 48px;
+        margin: 8px 16px 0 0;
+      }
+
+      & strong {
+        font-size: 26px;
+      }
+
+      & p {
+        @apply text-sm;
+
+        color: var(--text-body);
+      }
+
+      & > .progress {
+        @apply w-full absolute bottom-0 left-0 mobile:hidden;
+
+        height: 8px;
+        background-color: #f6f7f9;
+
+        & > span {
+          @apply inline-block absolute left-0 bottom-0 h-full;
+        }
+      }
+    }
+
+    @screen mobile {
+      padding: 0 24px 30px;
+
+      & > li {
+        @apply border-0;
+
+        height: auto;
+        padding: 0;
+        padding-bottom: 20px;
+        border-radius: 0;
+
+        &:last-child {
+          border-bottom: 1px solid var(--border-gray);
+        }
+
+        & > div:first-child {
+          width: 40px;
+          height: 40px;
+          margin: 0 12px 0 0;
+        }
+
+        & strong {
+          @apply absolute;
+
+          top: 0;
+          right: 0;
+        }
+
+        & p {
+          color: var(--text-heading);
+        }
+      }
+    }
+  }
+}

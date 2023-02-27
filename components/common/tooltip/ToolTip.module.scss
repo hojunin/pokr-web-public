@@ -1,0 +1,51 @@
+.root {
+  @apply relative text-white text-xs;
+
+  padding: 10px 20px;
+  border-radius: 8px;
+  background-color: var(--content-black);
+  animation: fadeOut 2.5s ease-out forwards;
+
+  &:after {
+    @apply absolute left-1/2;
+
+    content: '';
+    width: 0px;
+    height: 0px;
+    bottom: -7px;
+    margin-left: -3.5px;
+    border-top: 8px solid var(--content-black);
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+  }
+
+  &.open {
+    animation-name: fadeIn;
+  }
+  &.close {
+    animation: fadeOut 0.25s ease-out forwards;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}

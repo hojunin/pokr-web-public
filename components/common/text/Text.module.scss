@@ -1,0 +1,52 @@
+.typo {
+  @apply block;
+
+  margin-bottom: 12px;
+  color: #333;
+
+  &.normal {
+    @apply font-light;
+  }
+
+  &.bold {
+    @apply font-bold;
+  }
+}
+
+h1.typo {
+  font-size: 42px;
+}
+
+h2.typo {
+  font-size: 34px;
+}
+
+h3.typo {
+  @apply text-2xl;
+}
+
+h4.typo {
+  @apply text-xl;
+}
+
+h6.typo {
+  @apply text-sm;
+}
+
+p.typo {
+  @apply text-xs;
+}
+
+label.typo {
+  @apply text-base;
+}
+
+span.typo {
+  &.button {
+    @apply text-sm;
+  }
+
+  &.tag {
+    font-size: 10px;
+  }
+}

@@ -1,0 +1,5 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+echo "# Check lint =============================="
+env FORCE_COLOR=1 yarn lint-staged
